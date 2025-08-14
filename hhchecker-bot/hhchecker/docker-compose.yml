@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    env_file: 
+      - .env
+    restart: unless-stopped
+    depends_on:
+      - db
+    volumes:
+      - ./app:/app/app
+
+  db:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"

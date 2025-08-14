@@ -1,0 +1,8 @@
+aiogram==3.1.1
+requests
+aiohttp
+APScheduler==3.11.0
+python-dotenv
+SQLAlchemy
+alembic
+aiologger>=0.7.0
